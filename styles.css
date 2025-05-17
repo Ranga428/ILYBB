@@ -1,39 +1,95 @@
-.buttons {
-  margin-top: 20px;
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top right, #ffe6f0, #e6f7ff);
+  font-family: 'Indie Flower', cursive;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 90%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ff66b2;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #ff3399;
+}
+
+.love-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 button {
   font-family: 'Indie Flower', cursive;
   font-size: 1.2rem;
-  padding: 10px 20px;
-  background-color: #ffb6c1;
-  color: white;
+  padding: 10px 25px;
   border: none;
-  border-radius: 20px;
-  margin: 10px;
+  border-radius: 25px;
+  background-color: #ff85a2;
+  color: white;
   cursor: pointer;
   transition: transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 200px;
+  width: 80%;
 }
 
 button:hover {
-  transform: scale(1.1);
-  background-color: #ff85a2;
+  transform: scale(1.05);
+  background-color: #ff5e93;
 }
 
 .hidden {
   display: none;
 }
 
-#secret-message {
-  font-size: 1.3rem;
-  color: #ff3399;
-  margin-top: 20px;
+#loveMessage {
+  margin-top: 30px;
 }
 
-#surprise-img {
-  margin-top: 20px;
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+.big-heart {
+  font-size: 5rem;
+  animation: beat 1s infinite;
+  color: #e60073;
+}
+
+.love-more {
+  font-size: 1.6rem;
+  color: #ff0066;
+  margin-top: 10px;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }

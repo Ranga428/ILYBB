@@ -9,38 +9,45 @@
 </head>
 <body>
   <div class="container">
-    <h1>Hi Angel! 💕</h1>
+    <h1>Hi Babyyyyyy kooooooo! 💕</h1>
     <p class="message">
-      You make my world brighter just by being in it.<br/>
-      This little website is just one way to say...<br/>
-      <span class="iloveyou">I love you! 💖</span>
+      Ikaw ang pinaka pinaka the best sa buong mundo mamahalin kita forever!.<br/>
+      May importanteng tanong po akoooo...
     </p>
 
-    <div class="buttons">
-      <button onclick="showMessage()">Click Me 💌</button>
-      <button onclick="showSurprise()">Show a Surprise 🎁</button>
+    <h2 class="question">Mahal mo po ba ako? 😳</h2>
+
+    <div class="love-buttons">
+      <button id="yesBtn" onclick="showLove()">Yes 💘</button>
+      <button id="noBtn" onmouseover="moveButton()" ontouchstart="moveButton()">No 🙈</button>
     </div>
 
-    <p id="secret-message" class="hidden"></p>
-    <img id="surprise-img" class="hidden" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="cute surprise" />
-  </div>
-
-  <div class="hearts">
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
+    <div id="loveMessage" class="hidden">
+      <div class="big-heart">❤️</div>
+      <p class="love-more">I LOVE YOU MORE! 💖</p>
+    </div>
   </div>
 
   <script>
-    function showMessage() {
-      const msg = document.getElementById('secret-message');
-      msg.textContent = "You're the most beautiful soul I know 💗";
-      msg.classList.remove('hidden');
+    function showLove() {
+      document.getElementById('loveMessage').classList.remove('hidden');
     }
 
-    function showSurprise() {
-      const img = document.getElementById('surprise-img');
-      img.classList.remove('hidden');
+    function moveButton() {
+      const noBtn = document.getElementById('noBtn');
+      const container = document.querySelector('.container');
+      const btnWidth = 100;
+      const btnHeight = 50;
+
+      const maxX = window.innerWidth - btnWidth;
+      const maxY = window.innerHeight - btnHeight;
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+
+      noBtn.style.position = 'fixed';
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
     }
   </script>
 </body>
