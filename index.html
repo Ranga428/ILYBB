@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Angel 💖</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Hi Angel! 💕</h1>
+    <p class="message">
+      You make my world brighter just by being in it.<br/>
+      This little website is just one way to say...<br/>
+      <span class="iloveyou">I love you! 💖</span>
+    </p>
+
+    <div class="buttons">
+      <button onclick="showMessage()">Click Me 💌</button>
+      <button onclick="showSurprise()">Show a Surprise 🎁</button>
+    </div>
+
+    <p id="secret-message" class="hidden"></p>
+    <img id="surprise-img" class="hidden" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="cute surprise" />
+  </div>
+
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <script>
+    function showMessage() {
+      const msg = document.getElementById('secret-message');
+      msg.textContent = "You're the most beautiful soul I know 💗";
+      msg.classList.remove('hidden');
+    }
+
+    function showSurprise() {
+      const img = document.getElementById('surprise-img');
+      img.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
